@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	<p>
+  		<strong>Title:</strong>
+  		<%= @post.title %>
+	</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<p>
+  <strong>created by:</strong>
+  <%= @post.user.email %>
+</p>
+<% if current_user.id == @post.user_id %>
+		<%= link_to 'Edit', edit_post_path(@post) %> |
+		<%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %> 
+<%= link_to 'Back', posts_path %>
+	
+ 
+
+<h3> Add a comment: </h3>
+
+<%= render 'comments/form' %>
+
+<h2> <%= @post.comments.count %> comments</h2>
+
+<%  @post.comments.each  do  |i| %>
+  
+  <p> <%= i.content %>
+    <sub><%= time_ago_in_words(i.created_at) %></sub>
+
+  </p>
+  
+<%end%>
+
+</div>

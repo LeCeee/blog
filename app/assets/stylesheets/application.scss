@@ -1,0 +1,33 @@
+	@import "bootstrap";
+
+#jumbo {
+  padding: 5px;
+}
+.container-fluid{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	width: 100%;
+	justify-content: space-between;
+}
+.row{
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	margin: 20px;
+}
+
+.col2{
+	width: 40%;
+	display: flex;
+}
+col3{
+	width: 75%;
+	display: flex;
+}
+.icon_image{
+	height: 150px;
+}
+

@@ -1,0 +1,13 @@
+<%= form_for @c do |form| %>
+  <%= hidden_field_tag "comment[id]", "#{@post.id}" %>
+
+  <div class="field">
+  
+    <%= form.text_area :content, id: :comments_content %>
+  </div>
+
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
