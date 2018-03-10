@@ -31,7 +31,8 @@
 
 <%  @post.comments.each  do  |i| %>
   
-  <p> <%= i.content %>
+  <p> <%=i.user.email%> : 
+    <%= i.content %>
     <sub><%= time_ago_in_words(i.created_at) %></sub>
 
   </p>
