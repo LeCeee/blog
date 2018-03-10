@@ -1,0 +1,5 @@
+console.log("javascript remdered");
+var commentsContainer = $('comments-container');
+var newComment = $( '<%= escape_javascript render "comments/comments", comments: @comment %>)
+	commentsContainer.append(newComment);
+	$('#comment_content').val(' ');

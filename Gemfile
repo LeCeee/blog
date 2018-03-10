@@ -9,6 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 gem 'devise'
+gem 'jquery-rails'
 gem 'bootstrap' , '~> 4.0.0.alpha3'
 gem 'autoprefixer-rails'
 # Use sqlite3 as the database for Active Record

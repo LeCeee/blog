@@ -4,12 +4,24 @@ class CommentsController < ApplicationController
  	def create
     
  		@post = Post.find(params[:comment][:id])
- 		@comment = @post.comments.create(post_id: params[:comment][:id] , 
-                                      content: params[:comment][:content]      )
+ 		@comment = @post.comments.create( 
+                                      post_id: params[:comment][:id] , 
+                                      content: params[:comment][:content]     
+                                     )
  		@comment.user_id = current_user.id
     @comment.save!
+
  		redirect_to post_path(@post)
  	end
+  # def create
+    
+  #   @comment = Comment.create(
+  #       post_id: params[:comment][:post_id],
+  #       user_id: current_user.id,
+  #       content: params[:comment][:content]
+  #     )
+  #   # redirect_to "/posts/#{params[:comment][:post_id]}"
+  # end
 
  	# def index
  	# 	@comments = Comment.all
