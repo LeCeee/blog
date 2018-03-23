@@ -9,6 +9,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 gem 'devise'
+gem 'paperclip', '~>6.0.0'
+gem 'jquery-rails'
 gem 'jquery-rails'
 gem 'bootstrap' , '~> 4.0.0.alpha3'
 gem 'autoprefixer-rails'

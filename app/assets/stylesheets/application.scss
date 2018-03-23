@@ -31,4 +31,15 @@ col3{
 .icon_image{
 	height: 150px;
 }
+.container{
+	display: flex;
+	justify-content:space-between;
+	flex-direction: column;
+	width: 70%;
+
+}
+.two{
+	display: flex;
+
+}
 

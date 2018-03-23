@@ -1,5 +1,14 @@
-console.log("javascript remdered");
-var commentsContainer = $('comments-container');
-var newComment = $( '<%= escape_javascript render "comments/comments", comments: @comment %>)
-	commentsContainer.append(newComment);
-	$('#comment_content').val(' ');
+console.log('file linked');
+var commentContainer = $('#comments-container');
+
+var newComment = $('<%= escape_javascript render "comments/comments", comments: @comment %>');
+
+var commentHead = $('#comment-head');
+var num = $('#number').html();
+console.log(parseInt(num)+1);
+// var newNum = parseInt(num)+1;
+
+commentContainer.append(newComment);
+ $('#comment_content').val('');
+ $('#number').text(parseInt(num)+1);
+

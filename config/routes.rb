@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   #get 'comments/new' => "comments#new"
 	#get'comments/create', as: 'comments'
 	 post 'comments/create' => "comments#create", as: "comments"
-  
+  get 'users/my_profile'
+  patch 'users/update' => 'users#update', as:'user'
 
 
   resources :posts do

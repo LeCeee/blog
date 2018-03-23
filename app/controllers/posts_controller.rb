@@ -62,7 +62,8 @@ class PostsController < ApplicationController
       format.json { head :no_content }
       format.js{}
     end
-  end
+    redirect_to root_path
+      end
 
   private
     # Use callbacks to share common setup or constraints between actions.

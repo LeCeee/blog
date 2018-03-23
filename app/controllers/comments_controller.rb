@@ -5,16 +5,33 @@ class CommentsController < ApplicationController
     
  		@post = Post.find(params[:comment][:id])
  		@comment = @post.comments.create( 
-                                      post_id: params[:comment][:id] , 
-                                      content: params[:comment][:content]     
-                                     )
- 		@comment.user_id = current_user.id
+                                post_id: params[:comment][:id] , 
+                                content: params[:comment][:content],
+                                user_id: current_user.id  
+                               )
+ 		
     @comment.save!
 
- 		redirect_to post_path(@post)
- 	end
+
+
+ 	# 	redirect_to post_path(@post
+  #     UserMailer.new_comment(@comment).deliver.now
+  # )end
+
+   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    end
+  end
+
+
+
+
+
+
+
   # def create
-    
+
   #   @comment = Comment.create(
   #       post_id: params[:comment][:post_id],
   #       user_id: current_user.id,
